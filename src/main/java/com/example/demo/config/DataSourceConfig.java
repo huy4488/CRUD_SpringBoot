@@ -1,0 +1,18 @@
+package com.example.demo.config;
+
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+
+import javax.sql.DataSource;
+
+public class DataSourceConfig {
+    @Bean
+    public DataSource dataSource() {
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/webapp_springboot");
+        dataSourceBuilder.driverClassName("org.postgresql.Driver");
+        dataSourceBuilder.username("postgres");
+        dataSourceBuilder.password("448899");
+        return dataSourceBuilder.build();
+    }
+}

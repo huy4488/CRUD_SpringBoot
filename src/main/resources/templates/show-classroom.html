@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Spring Boot AJAX jQuery CRUD</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <!-- jQuery Modal -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .modal p {
+            margin: 1em 0;
+        }
+        
+        .add_form.modal {
+            border-radius: 0;
+            line-height: 18px;
+            padding: 0;
+            font-family: "Lucida Grande", Verdana, sans-serif;
+        }
+        
+        .add_form.modal p {
+            padding: 20px 30px;
+            border-bottom: 1px solid #ddd;
+            margin: 0;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(1, #fff));
+            overflow: hidden;
+        }
+        
+        .add_form.modal p:last-child {
+            border: none;
+        }
+        
+        .add_form.modal p label {
+            float: left;
+            font-weight: bold;
+            color: #333;
+            font-size: 13px;
+            width: 110px;
+            line-height: 22px;
+        }
+        
+        .add_form.modal p input[type="text"],
+        .add_form.modal p input[type="submit"] {
+            font: normal 12px/18px "Lucida Grande", Verdana;
+            padding: 3px;
+            border: 1px solid #ddd;
+            width: 200px;
+        }
+        
+        #msg {
+            margin: 10px;
+            padding: 30px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            background: -moz-linear-gradient(top, #2e5764, #1e3d47);
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1e3d47), color-stop(1, #2e5764));
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Classroom</h2>
+    <p><a class='btn' href="#add" rel="modal:open">Add New Student</a></p>
+    <!-- <form id="addNew" action="#" class="add_form modal" style="display:none;">
+        <div id='msg' />
+        <h3>Add a new Classroom</h3>
+        <p>
+            <label>Name</label>
+            <input type="text" id="name" name="name"></br>
+            <label>Is Availible</label>
+            <input type="checkbox" id="available" name="check">
+        </p>
+        <p>
+            <input type="submit" id="addNew" value="Submit">
+        </p>
+    </form> -->
+
+
+    <div class="container-fluid">
+
+        <div class="row ">
+            <div class="col-md-5 col-sm-12 p-2">
+                <table border="1" cellspacing="0" cellpadding="5" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>IsAvailable</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5 col-sm-12 ">
+                <table border="1" cellspacing="0" cellpadding="5" class="table " id="studentTable">
+                    <thead class="thead-inverse ">
+                        <thead>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>ClassroomID</th>
+                            <th>ClassroomName</th>
+                        </thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <p><a class='btn' href="#add" rel="modal:open">Add New Classroom</a></p>
+        <form id="addNew" action="#" class="add_form modal">
+            <div id='msg' />
+            <h3>Add a new Classroom</h3>
+            <p>
+                <label>Name</label>
+                <input type="text" id="name" name="name"></br>
+                <label>Is Availible</label>
+                <input type="checkbox" id="available" name="check">
+            </p>
+            <p>
+                <input type="submit" id="addNew" value="Submit">
+            </p>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getJSON('http://localhost:8080/api/v1/classroom', function(json) {
+                var tr = [];
+                for (var i = 0; i < json.length; i++) {
+                    let isCheck = ''
+
+                    if (json[i].available == true) {
+                        isCheck = `<input type='checkbox' checked >`
+                    } else {
+                        isCheck = `<input type='checkbox'/>`
+
+                    }
+
+                    tr.push('<tr>');
+                    tr.push('<td>' + json[i].classroom_id + '</td>');
+                    tr.push('<td>' + json[i].name + '</td>');
+                    tr.push(`<td>${isCheck}</td>`);
+                    tr.push('<td><button class=\'edit\'>Edit</button>&nbsp;&nbsp;<button class=\'delete\' id=' + json[i].classroom_id + '>Delete</button>&nbsp;&nbsp;<button class=\'view\' id=' + json[i].classroom_id + '>View</button></td>');
+                    tr.push('</tr>');
+                }
+                //console.log(tr.val);
+                $("#myTable").append($(tr.join('')));
+            });
+
+            $(document).delegate('#addNew', 'click', function(event) {
+                event.preventDefault();
+
+                var name = $('#name').val();
+
+                var is_availible = $('#available').prop('checked');
+                console.log(is_availible);
+
+
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    url: "http://localhost:8080/api/v1/add-classroom",
+                    data: JSON.stringify({
+                        'name': name,
+                        'is_availible': is_availible
+                    }),
+                    cache: false,
+                    success: function(result) {
+                        $("#msg").html("<span style='color: green'>Classroom added successfully</span>");
+                        window.setTimeout(function() {
+                            location.reload()
+                        }, 1000)
+                    },
+
+
+                });
+            });
+
+            $(document).delegate('.view', 'click', function(event) {
+
+                var id = $(this).attr('id');
+                console.log(id);
+
+
+                $.ajax({
+                    type: "GET",
+                    url: "http://localhost:8080/api/v1/students-by-classroom/" + id,
+                    cache: false,
+                    success: function(response) {
+                        console.log(response[0].name);
+                        var tr = [];
+                        for (var i = 0; i < response.length; i++) {
+                            let isCheck = ''
+
+
+
+                            tr.push('<tr>');
+                            tr.push('<td>' + response[i].id + '</td>');
+                            tr.push('<td>' + response[i].name + '</td>');
+                            tr.push('<td>' + response[i].address + '</td>');
+                            tr.push('<td>' + response[i].classroomId + '</td>');
+                            tr.push('<td>' + response[i].classroomName + '</td>');
+                            //tr.push('<td><button class=\'edit\'>Edit</button>&nbsp;&nbsp;<button class=\'delete\' id=' + response[i].classroom_id + '>Delete</button>&nbsp;&nbsp;<button class=\'view\' id=' + response[i].classroom_id + '>View</button></td>');
+                            tr.push('</tr>');
+                        }
+                        //console.log(tr.val);
+                        $("#studentTable").append($(tr.join('')));
+                    },
+                    error: function() {
+                        $('#err').html('<span style=\'color:red; font-weight: bold; font-size: 30px;\'>Error deleting record').fadeIn().fadeOut(4000, function() {
+                            $(this).remove();
+                        });
+                    }
+                });
+
+
+            });
+
+            $(document).delegate('.delete', 'click', function() {
+                if (confirm('Do you really want to delete record?')) {
+                    var id = $(this).attr('id');
+                    var parent = $(this).parent().parent();
+                    $.ajax({
+                        type: "DELETE",
+                        url: "http://localhost:8080/api/v1/delete-classroom/" + id,
+                        cache: false,
+                        success: function() {
+                            parent.fadeOut('slow', function() {
+                                $(this).remove();
+                            });
+                            location.reload(true)
+
+
+                        },
+                        error: function() {
+                            $('#err').html('<span style=\'color:red; font-weight: bold; font-size: 30px;\'>Error deleting record').fadeIn().fadeOut(4000, function() {
+                                $(this).remove();
+                            });
+                        }
+                    });
+                }
+            });
+
+
+
+            $(document).delegate('.edit', 'click', function() {
+                var parent = $(this).parent().parent();
+
+                var id = parent.children("td:nth-child(1)");
+                var name = parent.children("td:nth-child(2)");
+                var check = parent.children("td:nth-child(3)");
+                var buttons = parent.children("td:nth-child(4)");
+
+                name.html("<input type='text' id='txtName' value='" + name.html() + "'/>");
+                check.html("<input type = 'checkbox' id='cbnCheck' " + check.html + "'/>");
+                buttons.html("<button id='update'>Update</button>&nbsp;&nbsp;<button class='delete' id='" + id.html() + "'>Delete</button>");
+            });
+
+            $(document).delegate('#update', 'click', function() {
+                var parent = $(this).parent().parent();
+
+                var id = parent.children("td:nth-child(1)");
+                var name = parent.children("td:nth-child(2)");
+                var check = parent.children("td:nth-child(3)");
+                var buttons = parent.children("td:nth-child(4)");
+
+
+                $.ajax({
+                    type: "PUT",
+                    contentType: "application/json; charset=utf-8",
+                    url: "http://localhost:8080/api/v1/classroom/" + id.html(),
+                    data: JSON.stringify({
+                        'id': id.html(),
+                        'name': name.children("input[type=text]").val(),
+                        'is_availible': check.children("input[type=checkbox]").prop('checked')
+                    }),
+                    cache: false,
+                    success: function() {
+
+                        $("#msgUpdate").html("<span style='color: green'>Classroom update successfully</span>");
+                        window.setTimeout(function() {
+                            location.reload()
+                        }, 1000)
+                    },
+                    error: function() {
+
+                        $('#err').html('<span style=\'color:red; font-weight: bold; font-size: 30px;\'>Error updating record').fadeIn().fadeOut(4000, function() {
+                            $(this).remove();
+                        });
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>
