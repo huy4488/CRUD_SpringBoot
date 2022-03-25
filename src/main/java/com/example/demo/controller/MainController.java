@@ -1,4 +1,4 @@
-package com.example.demo.controoler;
+package com.example.demo.controller;
 
 import java.security.Principal;
 
@@ -6,6 +6,7 @@ import com.example.demo.service.StudentSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,16 +26,7 @@ public class MainController {
 		return "welcomePage";
 	}
 
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public String adminPage(Model model, Principal principal) {
-		
-		User loginedUser = (User) ((Authentication) principal).getPrincipal();
 
-		String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
-		model.addAttribute("userInfo", userInfo);
-		
-		return "adminPage";
-	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage(Model model) {

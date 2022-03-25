@@ -42,7 +42,7 @@ public class AppSercurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/all-student","/adduser").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
 
-        http.authorizeRequests().antMatchers("/admin","/delete-student/**").access("hasRole('ROLE_ADMIN')")
+        http.authorizeRequests().antMatchers("/admin","/delete-student/**","/to-edit-student/**","/edit-student/**").access("hasRole('ROLE_ADMIN')")
                 .and().authorizeRequests().antMatchers("/api/v1/classroom/**").access("hasRole('ROLE_ADMIN')");
 
 

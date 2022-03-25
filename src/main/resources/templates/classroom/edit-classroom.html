@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit classroom</title>
+</head>
+<body>
+<h1>Edit Classroom</h1>
+
+<form th:action="@{/edit-classroom/{id}(id=${classroom_id})}" th:object="${dto}" th:method="post" method="post" >
+
+    <h3>Edit a new Student</h3>
+    <p>
+        <!--            <input type="hidden" id="id" name="name" th:text="${student.id}"></br>-->
+        <label>ClassroomName</label>
+        <input type="text" id="name" name="name" th:value="${classroom.name}" ></br>
+        <label>Is availible</label>
+        <input th:if="${classroom.isAvailable == true}" type="checkbox" id="address" name="is_availible" checked>
+        <input th:unless="${classroom.isAvailable == true}" type="checkbox" id="address1" name="is_availible" >
+
+    </p>
+
+    <p>
+        <input type="submit" id="addNew" value="Submit">
+    </p>
+</form>
+
+</body>
+</html>

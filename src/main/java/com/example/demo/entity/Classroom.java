@@ -24,7 +24,7 @@ public class Classroom implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@TableGenerator(name = "Classroom_Gen", table = "ID_GEN", initialValue = 10000)
+	@TableGenerator(name = "Classroom_Gen", table = "ID_GEN", initialValue = 12000)
 
 	@Id
 	@Column(name = "classroom_id")

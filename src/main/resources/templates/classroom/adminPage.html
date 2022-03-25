@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:utext="${title}"></title>
+</head>
+
+<body>
+    <!-- Include _menu.html -->
+    <th:block th:include="/_menu"></th:block>
+
+    <h2>Admin Page</h2>
+    <h3>Welcome :
+        <span th:utext="${#request.userPrincipal.name}"></span>
+    </h3>
+    <b>This is protected page!</b>
+
+    <br/><br/>
+
+    <div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
+    <!doctype html>
+    <html>
+
+    <head>
+        <title>Spring Boot AJAX jQuery CRUD</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    </head>
+
+    <body>
+
+        <h2>Classroom</h2>
+
+        <p><a class='btn' href="#add" rel="modal:open">Add New Classroom</a></p>
+
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+            <tr>
+                <th>ClassroomID</th>
+                <th>ClassroomName</th>
+                <th>Is Available</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">Actions</th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+            <tr th:each="classroom : ${classrooms}">
+                <td th:text=" ${classroom.classroom_id}"></td>
+                <td th:text=" ${classroom.name} "></td>
+                <td >
+                    <input th:if="${classroom.isAvailable == true}" type="checkbox" name="cers"  checked/>
+                    <input th:unless="${classroom.isAvailable == true}" type="checkbox" name="cers" />
+
+                </td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')">
+                    <!--                    <form  th:action="@{/delete-student/{id}(id=${student.id})}" th:method="GET">-->
+                    <!--                        <input type="submit" id="" value="DELETE">-->
+                    <!--                    </form>-->
+                    <a th:href="@{/delete-classroom/{id}(id=${classroom.classroom_id})}" name="adelete" id="btnDeleteStudent" role="button " class="btn btn-warnning ">Delete</a>
+                    <a th:href="@{/edit-classroom/{id}(id=${classroom.classroom_id})}" name="updateStudent" id="btnUpdateStudent " class="btn btn-warnning " href="#edit" role="button ">Update</a>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div id='msgUpdate' />
+
+        <form sec:authorize="hasRole('ROLE_ADMIN')" id="add" th:action="@{/add-classroom}" th:object="${dto}" class="add_form modal" style="display:none;" method="post" action="#">
+
+            <h3>Add a new Classroom</h3>
+            <p>
+                <label>Name</label>
+                <input type="text" id="txtname" name="name"></br>
+                <label>Is Availible</label>
+                <input type="checkbox" id="txtaddress" name="is_availible"></br>
+            </p>
+
+            <p>
+                <input type="submit" id="btnEdit" value="Submit">
+            </p>
+        </form>
+
+    </body>
+
+    </html>
