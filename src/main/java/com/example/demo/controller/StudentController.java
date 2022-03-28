@@ -37,7 +37,7 @@ public class StudentController {
     }
 
     @GetMapping("/delete-student/{id}")
-    public String toStudent(Model model, Principal principal,@PathVariable int id) {
+    public String toStudent(Model model, Principal principal, @PathVariable int id) {
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
 
         String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
@@ -73,7 +73,7 @@ public class StudentController {
     }
 
     @PostMapping(value = "/edit-student/{id}")
-    public String editStudent(@PathVariable int id,Model model, Principal principal, StudentRequestDTO dto) {
+    public String editStudent(@PathVariable int id, Model model, Principal principal, StudentRequestDTO dto) {
 
         // Sau khi user login thanh cong se co principal
 //        String userName = principal.getName();
@@ -81,8 +81,8 @@ public class StudentController {
 //
 //
 //        System.out.println("User Name: " + userName);
-        boolean check = studentSevice.updateStudent(dto,id);
-        if(check){
+        boolean check = studentSevice.updateStudent(dto, id);
+        if (check) {
 
             User loginedUser = (User) ((Authentication) principal).getPrincipal();
             model.addAttribute("message", true);
@@ -91,7 +91,7 @@ public class StudentController {
             model.addAttribute("student", studentSevice.getAllStudent());
 
             return "student/list-student";
-        } else{
+        } else {
             model.addAttribute("message", "Update fail");
             model.addAttribute("student", studentSevice.getStudentById(id));
             return "student/edit-student";

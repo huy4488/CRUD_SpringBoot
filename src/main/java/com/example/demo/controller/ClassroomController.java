@@ -1,10 +1,10 @@
 package com.example.demo.controller;
 
+import com.example.demo.api.ClassroomControllerAPI;
 import com.example.demo.dto.ClassroomDTO;
-import com.example.demo.dto.ClassroomResponseDTO;
-import com.example.demo.dto.StudentRequestDTO;
-import com.example.demo.repository.Classroomrepository;
 import com.example.demo.service.ClassroomService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
@@ -20,6 +20,8 @@ import java.security.Principal;
 public class ClassroomController {
     @Autowired
     private ClassroomService classroomService;
+    private static final Logger logger = LoggerFactory.getLogger(ClassroomController.class);
+
     @GetMapping("/admin")
     public String adminPage(Model model, Principal principal) {
 
@@ -27,7 +29,8 @@ public class ClassroomController {
 
         String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
         model.addAttribute("userInfo", userInfo);
-        model.addAttribute("classrooms",classroomService.getAllClassroom());
+        model.addAttribute("classrooms", classroomService.getAllClassroom());
+        logger.info("new ");
 
         return "classroom/adminPage";
     }
@@ -42,9 +45,11 @@ public class ClassroomController {
         String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
         model.addAttribute("userInfo", userInfo);
         model.addAttribute("classrooms", classroomService.getAllClassroom());
+        logger.info(loginedUser.getUsername()+" add new classroom successful");
 
         return "classroom/adminPage";
     }
+
     @PostMapping(value = "/edit-classroom/{id}")
     public String editStudent(@PathVariable int id, Model model, Principal principal, ClassroomDTO dto) {
 
@@ -54,25 +59,28 @@ public class ClassroomController {
 //
 //
 //        System.out.println("User Name: " + userName);
-        boolean check = classroomService.updateClassroom(dto,id);
-        if(check){
+        boolean check = classroomService.updateClassroom(dto, id);
+        User loginedUser = null;
+        if (check) {
 
-            User loginedUser = (User) ((Authentication) principal).getPrincipal();
+            loginedUser = (User) ((Authentication) principal).getPrincipal();
             model.addAttribute("message", true);
             String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
             model.addAttribute("userInfo", userInfo);
             model.addAttribute("classrooms", classroomService.getAllClassroom());
+            logger.info(loginedUser.getUsername() + " edit calssroom with id: " + id + " successfulv");
 
             return "classroom/adminPage";
-        } else{
+        } else {
             model.addAttribute("message", "Update fail");
             model.addAttribute("classroom", classroomService.getClassroomById(id));
+            logger.error(loginedUser.getUsername()+ "edit classroom fail with classroom id:"+id);
             return "classroom/edit-classroom";
         }
     }
 
     @GetMapping("/delete-classroom/{id}")
-    public String toStudent(Model model, Principal principal,@PathVariable int id) {
+    public String toStudent(Model model, Principal principal, @PathVariable int id) {
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         classroomService.deleteClassroom(id);
         String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
@@ -89,7 +97,7 @@ public class ClassroomController {
         String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
         model.addAttribute("userInfo", userInfo);
         model.addAttribute("classroom", classroomService.getClassroomById(id));
-        model.addAttribute("classroom_id",id);
+        model.addAttribute("classroom_id", id);
 
         return "classroom/edit-classroom";
     }

@@ -1,21 +1,19 @@
 package com.example.demo.repository;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
-import javax.persistence.Query;
-
+import com.example.demo.entity.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.entity.UserRole;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
 public class AppRoleDAO {
 
-	@Autowired
+    @Autowired
     private EntityManager entityManager;
 
     public List<String> getRoleNames(Long userId) {
@@ -26,5 +24,5 @@ public class AppRoleDAO {
         query.setParameter("userId", userId);
         return query.getResultList();
 
-}
+    }
 }

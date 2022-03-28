@@ -1,22 +1,14 @@
 package com.example.demo.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 
 @Entity
 @Table(name = "App_Role", //
         uniqueConstraints = { //
-                @UniqueConstraint(name = "APP_ROLE_UK", columnNames = "Role_Name") })
+                @UniqueConstraint(name = "APP_ROLE_UK", columnNames = "Role_Name")})
 public class AppRole {
-    
+
     @Id
     @GeneratedValue
     @Column(name = "Role_Id", nullable = false)
@@ -40,5 +32,5 @@ public class AppRole {
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
-    
+
 }
