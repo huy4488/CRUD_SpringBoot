@@ -1,10 +1,12 @@
 package com.example.demo.api;
 
+import com.example.demo.controller.ClassroomController;
 import com.example.demo.dto.ClassroomDTO;
 import com.example.demo.dto.ClassroomResponseDTO;
 import com.example.demo.entity.Classroom;
 import com.example.demo.service.ClassroomService;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +21,7 @@ import java.util.List;
 public class ClassroomControllerAPI {
     @Autowired
     private ClassroomService classroomService;
-    private static final Logger logger = Logger.getLogger(ClassroomControllerAPI.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(ClassroomControllerAPI.class);
     @GetMapping("/")
     public ResponseEntity<List<ClassroomResponseDTO>> listAll() {
         try {

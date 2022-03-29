@@ -1,0 +1,43 @@
+{
+    "@timestamp" => 2021-09-05T06:34:11.977Z,
+       "message" => "29-08-2021 09:34:56.368 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Inside Hello World Function\r",
+          "type" => "log",
+      "@version" => "1",
+          "host" => "Vulcan",
+          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
+}
+{
+    "@timestamp" => 2021-09-05T06:34:11.977Z,
+       "message" => "29-08-2021 09:34:56.376 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Response => Hello World! Sun Aug 29 09:34:56 IST 2021\r",
+          "type" => "log",
+      "@version" => "1",
+          "host" => "Vulcan",
+          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
+}
+{
+    "@timestamp" => 2021-09-05T06:34:11.977Z,
+       "message" => "28-08-2021 20:33:24.598 [http-nio-8080-exec-1] INFO  c.demo.ELK.controller.ELKController.foodDetails - Inside Food Detail Function\r",
+          "type" => "log",
+      "@version" => "1",
+          "host" => "Vulcan",
+          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
+}
+{
+    "@timestamp" => 2021-09-05T06:34:11.977Z,
+       "message" => "28-08-2021 20:33:24.600 [http-nio-8080-exec-1] INFO  com.demo.ELK.services.ELKService.getAllFoodDetails - Fetching ALL food details...\r",
+          "type" => "log",
+      "@version" => "1",
+          "host" => "Vulcan",
+          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
+}
+"message" => "29-08-2021 09:34:56.368 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Inside Hello World Function\r",
+"message" => "29-08-2021 09:34:56.376 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Response => Hello World! Sun Aug 29 09:34:56 IST 2021\r","type" => "log",
+"@timestamp" => 2021-09-05T06:34:11.977Z,
+"message" => "28-08-2021 20:33:24.598 [http-nio-8080-exec-1] INFO  c.demo.ELK.controller.ELKController.foodDetails - Inside Food Detail Function\r",
+"type" => "log",
+"@version" => "1",
+"host" => "Vulcan",
+"path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
+
+
+  

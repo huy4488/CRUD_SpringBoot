@@ -68,7 +68,7 @@ public class ClassroomController {
             String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
             model.addAttribute("userInfo", userInfo);
             model.addAttribute("classrooms", classroomService.getAllClassroom());
-            logger.info(loginedUser.getUsername() + " edit calssroom with id: " + id + " successfulv");
+            logger.info(loginedUser.getUsername() + " edit classroom with id: " + id + " successful");
 
             return "classroom/adminPage";
         } else {

@@ -4,14 +4,16 @@ import com.example.demo.dto.StudentRequestDTO;
 import com.example.demo.dto.StudentResponseDTO;
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentSevice;
+import org.apache.juli.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
+
 
 import java.util.Calendar;
 import java.util.List;
@@ -22,8 +24,7 @@ import java.util.List;
 public class StudentControllerAPI {
     @Autowired
     private StudentSevice studentSevice;
-    private static final Logger logger = Logger.getLogger(StudentControllerAPI.class.getName());
-
+    private static final Logger logger = LoggerFactory.getLogger(StudentControllerAPI.class);
     @GetMapping("/")
     public ResponseEntity<List<StudentResponseDTO>> listAll() {
 

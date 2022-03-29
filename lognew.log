@@ -1,0 +1,25 @@
+2022-03-29 09:59:32.060  INFO 20988 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 18 on ndhuy2 with PID 20988 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+2022-03-29 09:59:32.067  INFO 20988 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-29 09:59:33.350  INFO 20988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-29 09:59:33.443  INFO 20988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+2022-03-29 09:59:34.518  INFO 20988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-29 09:59:34.532  INFO 20988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-29 09:59:34.533  INFO 20988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-29 09:59:34.705  INFO 20988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-29 09:59:34.705  INFO 20988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2508 ms
+2022-03-29 09:59:34.928  INFO 20988 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-29 09:59:35.649  INFO 20988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-29 09:59:35.927  INFO 20988 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-29 09:59:36.138  INFO 20988 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2022-03-29 09:59:36.456  INFO 20988 --- [main] o.hibernate.id.enhanced.TableGenerator   : HHH000398: Explicit segment value for id generator [ID_GEN.sequence_name] suggested; using default [classroom]
+2022-03-29 09:59:37.178  INFO 20988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-29 09:59:37.433  INFO 20988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-29 09:59:37.566  INFO 20988 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-29 09:59:37.578  INFO 20988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 09:59:38.200  WARN 20988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-29 09:59:38.532  INFO 20988 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-29 09:59:39.039  INFO 20988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-29 09:59:39.047  INFO 20988 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 7.874 seconds (JVM running for 8.718)
+2022-03-29 10:00:17.270  INFO 20988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 10:00:17.272  INFO 20988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-29 10:00:17.287  INFO 20988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
