@@ -40,3 +40,35 @@
 30-03-2022 14:02:26.113 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 8.124 seconds (JVM running for 8.806)
 30-03-2022 14:03:04.317 [http-nio-8080-exec-5] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
 30-03-2022 14:03:04.318 [http-nio-8080-exec-5] ERROR c.e.d.controller.StudentController.adduser - dbadmin1 add new fail
+30-03-2022 16:34:27.077 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 17100 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:34:27.103 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:36:05.350 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 23100 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:36:05.352 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:38:56.346 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 19128 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:38:56.350 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:40:04.511 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 1124 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:40:04.514 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:41:01.576 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 24064 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:41:01.579 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:41:55.883 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 17404 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:41:55.886 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:42:11.136 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 19740 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:42:11.142 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:42:19.880 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 9.566 seconds (JVM running for 10.267)
+30-03-2022 16:48:55.906 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 23796 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:48:55.908 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:50:58.325 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 9296 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:50:58.328 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:56:00.526 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 19876 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:56:00.528 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:56:58.653 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 24064 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 16:56:58.654 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 16:57:05.334 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 7.474 seconds (JVM running for 8.153)
+30-03-2022 16:57:50.915 [http-nio-8080-exec-8] INFO  c.e.demo.controller.MainController.logoutSuccessfulPage - Logout Successful!
+30-03-2022 16:58:03.642 [http-nio-8080-exec-3] ERROR c.e.demo.controller.MainController.accessDenied - Hi dbuser1<br> You do not have permission to access this page!
+30-03-2022 17:04:26.438 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 17656 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 17:04:26.441 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 17:05:14.208 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 16972 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 17:05:14.211 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 17:06:35.631 [main] INFO  c.e.d.c.ClassroomControllerTest.logStarting - Starting ClassroomControllerTest using Java 18 on ndhuy2 with PID 11260 (started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 17:06:35.634 [main] INFO  c.e.d.c.ClassroomControllerTest.logStartupProfileInfo - The following 1 profile is active: "prod"

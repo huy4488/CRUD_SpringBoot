@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Edit Classroom</h1>
-<h2 th:if="${error != null}">${error}</h2>
+<h2 th:if="${error != null}" th:text="${error}"></h2>
 
 <form th:action="@{/edit-classroom/{id}(id=${classroom_id})}" th:object="${dto}" th:method="post" method="post" >
 

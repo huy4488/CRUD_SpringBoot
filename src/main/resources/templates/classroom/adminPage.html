@@ -13,9 +13,11 @@
     <h3>Welcome :
         <span th:utext="${#request.userPrincipal.name}"></span>
     </h3>
-    <b>This is protected page!</b>
+    <b >This is protected page!</b>
 
-    <br/><br/>
+    <br/>
+    <b th:if="${message != null}" th:text="${message}"></b></br>
+    <br/>
 
     <div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
     <!doctype html>
