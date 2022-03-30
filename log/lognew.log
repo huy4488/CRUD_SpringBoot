@@ -1,43 +1,42 @@
-{
-    "@timestamp" => 2021-09-05T06:34:11.977Z,
-       "message" => "29-08-2021 09:34:56.368 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Inside Hello World Function\r",
-          "type" => "log",
-      "@version" => "1",
-          "host" => "Vulcan",
-          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
-}
-{
-    "@timestamp" => 2021-09-05T06:34:11.977Z,
-       "message" => "29-08-2021 09:34:56.376 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Response => Hello World! Sun Aug 29 09:34:56 IST 2021\r",
-          "type" => "log",
-      "@version" => "1",
-          "host" => "Vulcan",
-          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
-}
-{
-    "@timestamp" => 2021-09-05T06:34:11.977Z,
-       "message" => "28-08-2021 20:33:24.598 [http-nio-8080-exec-1] INFO  c.demo.ELK.controller.ELKController.foodDetails - Inside Food Detail Function\r",
-          "type" => "log",
-      "@version" => "1",
-          "host" => "Vulcan",
-          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
-}
-{
-    "@timestamp" => 2021-09-05T06:34:11.977Z,
-       "message" => "28-08-2021 20:33:24.600 [http-nio-8080-exec-1] INFO  com.demo.ELK.services.ELKService.getAllFoodDetails - Fetching ALL food details...\r",
-          "type" => "log",
-      "@version" => "1",
-          "host" => "Vulcan",
-          "path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
-}
-"message" => "29-08-2021 09:34:56.368 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Inside Hello World Function\r",
-"message" => "29-08-2021 09:34:56.376 [http-nio-8080-exec-6] INFO  c.demo.ELK.controller.ELKController.helloWorld - Response => Hello World! Sun Aug 29 09:34:56 IST 2021\r","type" => "log",
-"@timestamp" => 2021-09-05T06:34:11.977Z,
-"message" => "28-08-2021 20:33:24.598 [http-nio-8080-exec-1] INFO  c.demo.ELK.controller.ELKController.foodDetails - Inside Food Detail Function\r",
-"type" => "log",
-"@version" => "1",
-"host" => "Vulcan",
-"path" => "D:/Git Projects/ELK Logs Monitoring/ELK/logs/application.log"
-
-
-  
+30-03-2022 09:11:51.731 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 4076 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 09:11:51.750 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 09:12:09.696 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 19.643 seconds (JVM running for 25.139)
+30-03-2022 09:12:16.637 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 17684 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 09:12:16.640 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 09:12:23.133 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 7.193 seconds (JVM running for 7.864)
+30-03-2022 09:12:58.864 [http-nio-8080-exec-7] INFO  c.e.d.controller.ClassroomController.adminPage - new 
+30-03-2022 09:13:06.000 [http-nio-8080-exec-9] INFO  c.e.d.controller.ClassroomController.editStudent - dbadmin1 edit classroom with id: 10001 successful
+30-03-2022 10:32:45.569 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 18096 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 10:32:45.572 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 10:32:54.904 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 11.201 seconds (JVM running for 12.99)
+30-03-2022 10:33:19.478 [http-nio-8080-exec-6] INFO  c.e.d.controller.ClassroomController.adminPage - new 
+30-03-2022 10:33:34.654 [http-nio-8080-exec-8] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:0
+30-03-2022 10:34:24.391 [http-nio-8080-exec-1] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 10:39:15.273 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 4788 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 10:39:15.274 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 10:39:21.729 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 7.223 seconds (JVM running for 7.882)
+30-03-2022 10:39:51.850 [http-nio-8080-exec-4] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 10:40:13.152 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 23944 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 10:40:13.154 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 10:42:00.198 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 108.22 seconds (JVM running for 111.068)
+30-03-2022 10:45:48.696 [http-nio-8080-exec-4] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 10:45:53.739 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 18376 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 10:45:53.741 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 10:46:01.438 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 8.634 seconds (JVM running for 9.83)
+30-03-2022 10:46:44.816 [http-nio-8080-exec-5] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 10:49:00.157 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 5168 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 10:49:00.159 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 10:49:06.330 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 6.893 seconds (JVM running for 7.653)
+30-03-2022 10:49:28.186 [http-nio-8080-exec-9] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 10:49:28.189 [http-nio-8080-exec-9] ERROR c.e.d.c.RestResponseEntityExceptionHandler.handleConflict - Not save new student because:Not save new student because not found classroom with id:99
+30-03-2022 14:00:09.562 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 17820 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 14:00:09.567 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 14:00:15.997 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 7.222 seconds (JVM running for 7.976)
+30-03-2022 14:00:50.549 [http-nio-8080-exec-10] INFO  c.e.d.controller.ClassroomController.adduser - dbadmin1 add new classroom successful
+30-03-2022 14:01:08.834 [http-nio-8080-exec-2] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 14:01:08.835 [http-nio-8080-exec-2] ERROR c.e.d.controller.StudentController.adduser - dbadmin1 add new fail
+30-03-2022 14:02:18.891 [main] INFO  com.example.demo.DemoApplication.logStarting - Starting DemoApplication using Java 18 on ndhuy2 with PID 24460 (D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo\target\classes started by ndhuy2 in D:\CRUD_SpringBoot-master\CRUD_SpringBoot-master\git\demo)
+30-03-2022 14:02:18.896 [main] INFO  com.example.demo.DemoApplication.logStartupProfileInfo - The following 1 profile is active: "prod"
+30-03-2022 14:02:26.113 [main] INFO  com.example.demo.DemoApplication.logStarted - Started DemoApplication in 8.124 seconds (JVM running for 8.806)
+30-03-2022 14:03:04.317 [http-nio-8080-exec-5] WARN  c.e.d.s.s.StudentServiceImpl.addNewStudent - Not found classroom with id:99
+30-03-2022 14:03:04.318 [http-nio-8080-exec-5] ERROR c.e.d.controller.StudentController.adduser - dbadmin1 add new fail

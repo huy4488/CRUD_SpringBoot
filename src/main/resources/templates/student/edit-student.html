@@ -12,6 +12,7 @@
 
 <body>
     <h1>Edit Student</h1>
+    <h2 th:if="${error != null}">${error}</h2>
 
     <form th:action="@{/edit-student/{id}(id=${student.id})}" th:object="${dto}" th:method="post" method="post" >
 

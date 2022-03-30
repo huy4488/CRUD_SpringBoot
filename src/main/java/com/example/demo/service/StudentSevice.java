@@ -15,7 +15,7 @@ public interface StudentSevice {
 
     boolean updateStudent(StudentRequestDTO student, int id);
 
-    void deleteStudent(int id);
+    boolean deleteStudent(int id);
 
     List<StudentResponseDTO> getStudentByClassroomId(int classroom_id);
 }

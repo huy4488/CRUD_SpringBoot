@@ -3,6 +3,8 @@ package com.example.demo.service.serviceImpl;
 import com.example.demo.entity.AppUser;
 import com.example.demo.repository.AppRoleDAO;
 import com.example.demo.repository.AppUserDAO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,16 +27,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private AppRoleDAO appRoleDAO;
 
+    private static final Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
+
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         AppUser appUser = this.appUserDAO.findUserAccount(userName);
 
         if (appUser == null) {
-            System.out.println("User not found! " + userName);
+            logger.error("User " + userName + " was not found in the database");
             throw new UsernameNotFoundException("User " + userName + " was not found in the database");
         }
 
-        System.out.println("Found User: " + appUser);
+
 
         // [ROLE_USER, ROLE_ADMIN,..]
         List<String> roleNames = this.appRoleDAO.getRoleNames(appUser.getUserId());

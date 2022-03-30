@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
 <head>
     <meta charset="UTF-8">
     <title>Edit classroom</title>
 </head>
 <body>
 <h1>Edit Classroom</h1>
+<h2 th:if="${error != null}">${error}</h2>
 
 <form th:action="@{/edit-classroom/{id}(id=${classroom_id})}" th:object="${dto}" th:method="post" method="post" >
 

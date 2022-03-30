@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.api.ClassroomControllerAPI;
 import com.example.demo.dto.ClassroomDTO;
 import com.example.demo.service.ClassroomService;
 import org.slf4j.Logger;
@@ -30,7 +29,7 @@ public class ClassroomController {
         String userInfo = com.example.demo.utils.WebUtils.toString(loginedUser);
         model.addAttribute("userInfo", userInfo);
         model.addAttribute("classrooms", classroomService.getAllClassroom());
-        logger.info("new ");
+        //logger.info(loginedUser.getUsername() +"login");
 
         return "classroom/adminPage";
     }
@@ -39,6 +38,7 @@ public class ClassroomController {
     public String adduser(Model model, Principal principal, ClassroomDTO dto) {
 
         // Sau khi user login thanh cong se co principal
+
         classroomService.addNewClassroom(dto);
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
 
@@ -55,10 +55,7 @@ public class ClassroomController {
 
         // Sau khi user login thanh cong se co principal
 //        String userName = principal.getName();
-//
-//
-//
-//        System.out.println("User Name: " + userName);
+
         boolean check = classroomService.updateClassroom(dto, id);
         User loginedUser = null;
         if (check) {
@@ -74,6 +71,7 @@ public class ClassroomController {
         } else {
             model.addAttribute("message", "Update fail");
             model.addAttribute("classroom", classroomService.getClassroomById(id));
+            model.addAttribute("error","update fail");
             logger.error(loginedUser.getUsername()+ "edit classroom fail with classroom id:"+id);
             return "classroom/edit-classroom";
         }

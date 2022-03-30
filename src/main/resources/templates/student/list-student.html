@@ -20,14 +20,14 @@
 
     <h2>User Info Page</h2>
     <h3>Welcome : <span th:utext="${#request.userPrincipal.name}"></span></h3>
-    <b>This is protected page!</b>
+
 
     <br/><br/>
 
     <div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
+    <b th:if="${message != null}" th:text="${message}">a</b></br>
 
-
-    <h2>Student1</h2>
+    <h2>Student</h2>
 
     <p sec:authorize="hasRole('ROLE_ADMIN')"><a class='btn' href="#add" rel="modal:open">Add New Student</a></p>
     <form sec:authorize="hasRole('ROLE_ADMIN')" id="add" th:action="@{/adduser}" th:object="${dto}" class="add_form modal" style="display:none;" method="post" action="#">
