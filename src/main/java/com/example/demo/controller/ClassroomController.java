@@ -5,6 +5,7 @@ import com.example.demo.service.ClassroomService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ public class ClassroomController {
 
     @GetMapping("/admin")
     public String adminPage(Model model, Principal principal) {
+
 
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
 
